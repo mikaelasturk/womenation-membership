@@ -1,4 +1,4 @@
-// [ ] TODO Put in correct fonts etc from graphic design 
+// [ x ] TODO Put in correct fonts etc from graphic design 
 // [ ] TODO Look through reset 
 
 import { createGlobalStyle } from "styled-components"
@@ -8,24 +8,29 @@ export const GlobalStyle = createGlobalStyle`
     /* ------------- */
     /* Font settings */
     /* ------------- */ 
-    --font-family:  Arial, sans-serif;
-    --font-txt: var(--font-family);
-    --font-heading: var(--font-family);
+    
+    --font-body-txt: 'Ubuntu-Regular', sans-serif;
+    --font-heading: 'Ubuntu-Bold', sans-serif;
+    --font-highlighted-txt: 'Didot-Bold', serif;
 
-    --h1-font-weight: 600;
+    //--h1-font-weight: 600;
     --p-font-size-mobile: 16px;
     --h1-font-size-mobile: 32px;
 
     --p-font-size-desktop:18px;
     --h1-font-size-desktop: 32px;
     
-   
-
     /* ----------- */
     /* Main colors */
     /* ----------- */
-    //--1st-clr: #000000; 
-    //--2nd-clr: #FFFFFF;
+    --darkPurple: '#442E57', //from graphic design
+    --mediumPurple: '#574368', //from website
+    --lightPurple: '#CFCCE4', //from graphic design
+    --gold: '#CDB56C', //from graphic design
+    --darkGrey: '#353333', //from website
+    --lightGrey: '#C6C6C7', //made up
+    --black: '#000000',         
+    --white: '#ffffff'
   }
 
   /* --------- */
@@ -47,7 +52,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     min-height: 100vh;
     line-height: 1.3;
-    font-family: var(--font-txt);
+    font-family: var(--font-bodytxt);
     max-width: 100vw;
     background-color: var(--1st-clr);
     color: var(--2nd-clr);
@@ -64,6 +69,7 @@ export const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6 {
     display: block;
+    font-family: var(--font-heading);
     font-size: 2em;
     margin-block-start: 0.67em;
     margin-block-end: 0.67em;
@@ -79,7 +85,6 @@ export const GlobalStyle = createGlobalStyle`
 
   h1 {
     font-size: var(--h1-font-size-mobile);
-    font-weight: var(--h1-font-weight);
   }
 
   p {
@@ -105,8 +110,6 @@ export const GlobalStyle = createGlobalStyle`
       font-size: var(--p-font-size-desktop);
     }
   }
-
-  
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktopLarge}) {
    

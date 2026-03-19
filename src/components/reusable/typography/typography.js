@@ -1,5 +1,5 @@
 // [ ] TODO 
 
-export { BodyText } from './BodyText'
-export { CardTitle } from './CardTitle'
-export { PageTitle } from './PageTitle'
+export { BodyText } from './BodyText' //p tag
+export { CardTitle } from './CardTitle' //h2 tag
+export { PageTitle } from './PageTitle' //h1 tag
