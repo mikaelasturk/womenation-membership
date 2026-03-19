@@ -1,5 +1,13 @@
+import { ThemeProvider } from "styled-components"
+import { Theme } from "./themes/Theme"
+import { GlobalStyle } from "./styles/GlobalStyle"
+import { OmMedlemskap } from "./pages/omMedlemskap"
+
 export const App = () => {
   return (
-    <h1>React Boilerplate</h1>
+    <ThemeProvider theme={Theme}>
+      <GlobalStyle />
+      <OmMedlemskap/>
+    </ThemeProvider>
   )
 }
