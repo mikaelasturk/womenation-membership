@@ -4,7 +4,31 @@ import { useContentStore } from "../store/contentStore"
 import { PageTitle, BodyText } from "../components/reusable/typography/typography"
 
 const StyledOmMedlemskap = styled.div`
+   background: ${({ theme }) => theme.colors.darkPurple};
+   min-height: 100vh;
+`
 
+const StyledContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  color: ${({ theme }) => theme.colors.white};
+`
+
+const StyledCardContainer = styled.div`
+  margin: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 50px;
+  }
 `
 
 export const OmMedlemskap = () => {
@@ -12,10 +36,14 @@ export const OmMedlemskap = () => {
 
   return (
     <StyledOmMedlemskap>
-      <PageTitle text={content.heading} />
-      <BodyText text={content.text} />
-      <MembershipCard variant="pro" />
-      <MembershipCard variant="enterprise" />
+      <StyledContent>
+        <PageTitle text={content.heading} />
+        <BodyText text={content.text} />
+        <StyledCardContainer>
+          <MembershipCard variant="pro" />
+          <MembershipCard variant="enterprise" />
+        </StyledCardContainer>
+      </StyledContent>
     </StyledOmMedlemskap>
   )
 }

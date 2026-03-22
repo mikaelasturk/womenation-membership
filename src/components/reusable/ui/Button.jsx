@@ -4,11 +4,21 @@ const StyledButton = styled.button`
   border-radius: 20px;
   background: ${({ theme }) => theme.colors.gold};
   border: none;
-  padding: 8px 30px;
+  display: flex;
+  justify-self: center;
+  
+
+
+  ${({ $variant }) => $variant === "card" && `
+    padding: 8px 30px;
+    width: max-content;
+    margin-top: 50px;
+    align-self: center;
+  `}
 `
 
-export const Button = ({ children }) => {
+export const Button = ({ text, variant }) => {
   return (
-    <StyledButton>{children}</StyledButton>
+    <StyledButton $variant={variant}>{text}</StyledButton>
   )
 }

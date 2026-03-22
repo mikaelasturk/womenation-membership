@@ -9,16 +9,25 @@ export const Theme = {
     desktop: '1024px',
   },
 
-   colors: {
-     darkPurple: '#442E57',     //grafisk profil
-     mediumPurple: '#574368', //hemsidan
-     lightPurple: '#CFCCE4', //grafisk profil
-     gold: '#CDB56C', //grafisk profil
-     darkGrey: '#353333', //hemsidan
-     lightGrey: '#C6C6C7', //påhittad
-     black: '#000000',         
-     white: '#ffffff'
-   },
+  colors: {
+    darkPurple: '#442E57',     //grafisk profil
+    mediumPurple: '#574368', //hemsidan
+    lightPurple: '#CFCCE4', //grafisk profil
+    gold: '#CDB56C', //grafisk profil
+    darkGrey: '#353333', //hemsidan
+    lightGrey: '#C6C6C7', //påhittad
+    black: '#000000',         
+    white: '#ffffff'
+  },
+
+  // --darkPurple: '#442E57', //from graphic design
+  // --mediumPurple: '#574368', //from website
+  // --lightPurple: '#CFCCE4', //from graphic design
+  // --gold: '#CDB56C', //from graphic design
+  // --darkGrey: '#353333', //from website
+  // --lightGrey: '#C6C6C7', //made up
+  // --black: '#000000',         
+  // --white: '#ffffff'
 
   //Color theme for "omMedlemskap" page
   omMedlemskap: {
@@ -45,5 +54,20 @@ export const Theme = {
   loggaIn: {
     bgClr: '',
     txtClr: '',
+    cards: {
+      bgClr: '',
+    },
+    form: {
+      bgClr: '',
+      txtClr: '',
+      inputBgClr: '',
+      inputTxtClr: '',
+    },
+    buttons: {
+      loggaIn: {
+        bgClr: '',
+        txtClr: '',
+      },
+    },
   },
 }

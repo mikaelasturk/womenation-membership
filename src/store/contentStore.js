@@ -1,6 +1,6 @@
 import { create } from "zustand"
 
-const content = {
+const membershipContent = {
   heading: "Bli premium medlem!",
   text: "Få exklusiva rabatter och erbjudande. Förtur på eventbiljetter ...",
   cards: {
@@ -17,8 +17,31 @@ const content = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
   },
+  buttons: {
+    pro: "Välj Pro",
+    enterprise: "Välj Enterprise",
+    loggaIn: "Logga in" 
+  }
 }
 
+const logInContent = {
+  heading: "Logga in",
+  text: "Välkommen tillbaka! Logga in för att få tillgång till ditt konto.",
+  form: {
+    email: "E-post",
+    password: "Lösenord",
+    button: "Logga in"
+  },
+}
+
+const minaSidorContent = {
+  heading: "Mina sidor",
+  description: "Här kan du se dina medlemskap och uppdatera din information.", 
+} 
+
+
 export const useContentStore = create(() => ({
-  content,
+  content: membershipContent,
+  logInContent: logInContent,
+  minaSidorContent: minaSidorContent
 }))

@@ -1,4 +1,4 @@
-// [ x ] TODO Put in correct fonts etc from graphic design 
+// [x] TODO Put in correct fonts etc from graphic design 
 // [ ] TODO Look through reset 
 
 import { createGlobalStyle } from "styled-components"
@@ -9,9 +9,9 @@ export const GlobalStyle = createGlobalStyle`
     /* Font settings */
     /* ------------- */ 
     
-    --font-body-txt: 'Ubuntu-Regular', sans-serif;
-    --font-heading: 'Ubuntu-Bold', sans-serif;
-    --font-highlighted-txt: 'Didot-Bold', serif;
+    --font-body-txt: 'Ubuntu', sans-serif; // fontweight 400
+    --font-heading: 'Ubuntu', sans-serif; // fontweight 700
+    --font-highlighted-txt: 'Didot', serif;
 
     //--h1-font-weight: 600;
     --p-font-size-mobile: 16px;
@@ -52,7 +52,8 @@ export const GlobalStyle = createGlobalStyle`
   body {
     min-height: 100vh;
     line-height: 1.3;
-    font-family: var(--font-bodytxt);
+    font-family: var(--font-body-txt);
+    font-weight: 400;
     max-width: 100vw;
     background-color: var(--1st-clr);
     color: var(--2nd-clr);
@@ -75,7 +76,7 @@ export const GlobalStyle = createGlobalStyle`
     margin-block-end: 0.67em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    font-weight: bold;
+    font-weight: 700;
     unicode-bidi: isolate;
   }
 

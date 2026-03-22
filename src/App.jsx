@@ -1,13 +1,13 @@
 import { ThemeProvider } from "styled-components"
-import { Theme } from "./themes/Theme"
+import { Theme } from "./themes/theme"
 import { GlobalStyle } from "./styles/GlobalStyle"
-import { OmMedlemskap } from "./pages/omMedlemskap"
+import { OmMedlemskap } from "./pages/OmMedlemskap"
 
 export const App = () => {
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
-      <OmMedlemskap/>
+      <OmMedlemskap />
     </ThemeProvider>
   )
 }
