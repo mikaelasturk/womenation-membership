@@ -20,7 +20,7 @@ const membershipContent = {
   buttons: {
     pro: "Välj Pro",
     enterprise: "Välj Enterprise",
-    loggaIn: "Logga in" 
+    logIn: "Logga in" 
   }
 }
 

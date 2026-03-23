@@ -1,6 +1,6 @@
 // [ ] Make components for inputfields?
 // [ ] Connect form to backend
-// [ ] Connect form to content store
+// [x] Connect form to content store
 
 import styled from 'styled-components'
 import { useContentStore } from '../store/contentStore'

@@ -31,42 +31,43 @@ export const Theme = {
 
   //Color theme for "omMedlemskap" page
   omMedlemskap: {
-    bgClr: '',
-    txtClr: '',
+    bgClr: 'var(--darkPurple)',
+    txtClr: 'var(--white)',
 
     cards:{
-      bgClr: '',
+      bgClr: 'var(--mediumPurple)',
+      txtClr: 'var(--white)'
     },
 
     buttons: {
       väljMedlemskap: {
-        bgClr: '',
-        txtClr: '',
+        bgClr: 'var(--gold)',
+        txtClr: 'var(--black)',
       },
       loggaIn: {
-        bgClr: '',
-        txtClr: '',
+        bgClr: 'var(--gold)',
+        txtClr: 'var(--black)',
       },
     },
   },
   
   //Color theme for "loggaIn" page
   loggaIn: {
-    bgClr: '',
+    bgClr: 'var(--black)',
     txtClr: '',
     cards: {
       bgClr: '',
     },
     form: {
-      bgClr: '',
-      txtClr: '',
+      bgClr: 'var(--darkGrey)',
+      txtClr: 'var(--white)',
       inputBgClr: '',
       inputTxtClr: '',
     },
     buttons: {
       loggaIn: {
-        bgClr: '',
-        txtClr: '',
+        bgClr: 'var(--gold)',
+        txtClr: 'var(--black)',
       },
     },
   },

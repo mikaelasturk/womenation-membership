@@ -2,9 +2,10 @@ import styled from 'styled-components'
 import { MembershipCard } from "../components/pages/om-medlemskap/MembershipCard"
 import { useContentStore } from "../store/contentStore"
 import { PageTitle, BodyText } from "../components/reusable/typography/typography"
+import { Button } from '../components/reusable/ui/Button'
 
 const StyledOmMedlemskap = styled.div`
-   background: ${({ theme }) => theme.colors.darkPurple};
+   background: ${({ theme }) => theme.omMedlemskap.bgClr};
    min-height: 100vh;
 `
 
@@ -12,7 +13,7 @@ const StyledContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-self: center;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.omMedlemskap.txtClr};
 `
 
 const StyledCardContainer = styled.div`
@@ -21,13 +22,14 @@ const StyledCardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
     display: flex;
     flex-direction: row;
     gap: 30px;
     justify-content: center;
-    margin-top: 50px;
+    
   }
 `
 
@@ -36,6 +38,7 @@ export const OmMedlemskap = () => {
 
   return (
     <StyledOmMedlemskap>
+        <Button text={content.buttons.logIn} variant="login"></Button>
       <StyledContent>
         <PageTitle text={content.heading} />
         <BodyText text={content.text} />

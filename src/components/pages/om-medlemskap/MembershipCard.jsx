@@ -10,7 +10,7 @@ import { BodyText, CardTitle } from "../../reusable/typography/typography"
 import { useContentStore } from "../../../store/contentStore"
 
 const StyledCard = styled.div`
-  background: ${({theme}) => theme.colors.mediumPurple};
+  background: ${({ theme }) => theme.omMedlemskap.cards.bgClr};
   border-radius: 10px;
   padding: 30px;
   display: flex;
@@ -40,7 +40,7 @@ const StyledTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-self: center;
-  color: ${({theme}) => theme.colors.white};
+  color: ${({theme}) => theme.omMedlemskap.cards.txtClr};
 `
 
 export const MembershipCard = ({ variant }) => {
@@ -53,7 +53,7 @@ export const MembershipCard = ({ variant }) => {
         <CardTitle text={content.cards[variant].price} />
         <BodyText text={content.cards[variant].info}/>
       </StyledTextContainer>
-      <Button text={content.buttons[variant]} variant="card"></Button>
+      <Button text={content.buttons[variant]} variant="card" />
     </StyledCard>
   )
 }
