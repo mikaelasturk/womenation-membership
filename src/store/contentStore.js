@@ -28,6 +28,7 @@ const logInContent = {
   heading: "Logga in",
   text: "Välkommen tillbaka! Logga in för att få tillgång till ditt konto.",
   form: {
+    name: "namn",
     email: "E-post",
     password: "Lösenord",
     button: "Logga in"

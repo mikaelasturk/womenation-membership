@@ -24,8 +24,8 @@ export const Hamburger = () => {
       </StyledButton>
       <StyledNavContent $expanded={expanded}>
         <StyledHamList>
-          <li><StyledHamItem to="/">Home</StyledHamItem></li>
-          <li><StyledHamItem to="/clothes">Clothes</StyledHamItem></li>
+          <li><StyledHamItem to="/om-medlemskap">Om medlemskap</StyledHamItem></li>
+          <li><StyledHamItem to="/login">login</StyledHamItem></li>
         </StyledHamList>
       </StyledNavContent>
     </StyledNav>

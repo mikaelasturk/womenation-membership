@@ -3,27 +3,39 @@
 // [x] Connect form to content store
 
 import styled from 'styled-components'
-import { useContentStore } from '../store/contentStore'
-import { CardTitle } from '../components/reusable/typography/typography'
+import { useContentStore } from '../../../store/contentStore'
+import { Button } from '../../reusable/ui/Button'
+//import { CardTitle } from '../components/reusable/typography/typography'
 
 const StyledForm = styled.form`
-
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`
+const StyledInput = styled.input`
+   background: ${({theme}) => theme.loggaIn.form.inputBgClr};
+   color: ${({theme}) => theme.loggaIn.form.inputTxtClr};
+   width: 100%;
+   border-radius: 3px;
+   border: none;
 `
 
-export const ComponentTemplate = () => {
+export const LogInForm = () => {
   const { logInContent } = useContentStore()
-  const { heading, form  } = logInContent
+  const { form } = logInContent
 
   return (
     <StyledForm>
-      <CardTitle text={heading} />
-      <label htmlFor="email" text={form.email}> 
-        <input type="email" id="email" name="email" />
+      {/* <label htmlFor="name" text={form.name}> 
+        <StyledInput type="name" id="name" name="name" />
+      </label> */}
+      <label htmlFor="email" >{form.email}
+        <StyledInput type="email" id="email" name="email" />
       </label>
-      <label htmlFor="password" text={form.password} >
-        <input type="password" id="password" name="password" />
+      <label htmlFor="password">{form.password}
+        <StyledInput type="password" id="password" name="password" />
       </label>
-      <Button text={form.button} />
+      <Button text={form.button} variant="loggaIn-login"/>
     </StyledForm>
 
   )

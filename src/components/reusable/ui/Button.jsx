@@ -15,9 +15,13 @@ const StyledButton = styled.button`
     background: ${theme.omMedlemskap.buttons.väljMedlemskap.bgClr};
   `}
 
-  ${({ $variant, theme }) => $variant === "login" && `
-    background: ${theme.omMedlemskap.buttons.loggaIn.bgClr}
+  ${({ $variant, theme }) => $variant === "omMedlemskap-login" && `
+    background: ${theme.omMedlemskap.buttons.loggaIn.bgClr};
     
+  `}
+
+  ${({ $variant, theme }) => $variant === "loggaIn-login" && `
+    background: ${theme.loggaIn.buttons.loggaIn.bgClr};
   `}
 `
 

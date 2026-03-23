@@ -1,23 +1,38 @@
 // [ ] TODO make button for going back to the membership page. 
 
 import styled from 'styled-components'
-import { Button } from '../reusable/ui/Button'
-import { BodyText, CardTitle } from '../components/reusable/typography/typography'
-import { useContentStore } from '../store/contentStore'
+import { Button } from '../../reusable/ui/Button'
+import { BodyText, CardTitle } from '../../reusable/typography/typography'
+import { useContentStore } from '../../../store/contentStore'
+import { LogInForm } from "./LogInForm"
 
 const StyledLogInCard = styled.div`
+  background: ${({theme}) => theme.loggaIn.form.bgClr};
+  color: ${({theme}) => theme.loggaIn.form.txtClr};
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-self: center;
+  padding: 30px;
+  border-radius: 10px;
+`
+
+const StyledTextContainer = styled.div`
 
 `
 
 export const LogInCard = () => {
   const { logInContent } = useContentStore()
-  const { heading, description } = logInContent
+  const { heading, text } = logInContent
 
   return (
-    <StyledLogInCard >  
-      <CardTitle text={heading} />
-      <BodyText text={description} />
-      <Button text="Gå tillbaka" /> 
+    <StyledLogInCard >
+      <StyledTextContainer>
+        <CardTitle text={heading} />
+        <BodyText text={text} />
+      </StyledTextContainer>
+      <LogInForm />
     </StyledLogInCard>
   )
 }

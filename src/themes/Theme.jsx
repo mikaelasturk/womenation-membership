@@ -61,8 +61,8 @@ export const Theme = {
     form: {
       bgClr: 'var(--darkGrey)',
       txtClr: 'var(--white)',
-      inputBgClr: '',
-      inputTxtClr: '',
+      inputBgClr: 'var(--lightGrey)',
+      inputTxtClr: 'var(--darkGrey)',
     },
     buttons: {
       loggaIn: {
