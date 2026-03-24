@@ -5,7 +5,7 @@ import { PageTitle, BodyText } from "../components/reusable/typography/typograph
 
 const StyledOmMedlemskap = styled.div`
    background: ${({ theme }) => theme.omMedlemskap.bgClr};
-   min-height: 100vh;
+   min-height: 90vh;
 `
 
 const StyledContent = styled.div`

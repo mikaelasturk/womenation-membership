@@ -1,0 +1,1 @@
+export { MedlemsportalLayout } from "./MedlemsportalLayout"

@@ -6,10 +6,20 @@ const PageWrapper = styled.div`
 `
 
 const Sidebar = styled.aside`
-  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background: ${({ theme }) => theme.colors.lightGrey};
+  min-height: 100vh;
+  width: 250px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: none;
+  }
 `
 
-const Content = styled.main`
+const StyledMain = styled.main`
   
 `
 
@@ -17,14 +27,15 @@ export const MedlemsportalLayout = () => {
   return (
     <PageWrapper>
       <Sidebar>
-        <NavLink to="/om-medlemskap/mina-sidor" text="Mina Sidor" />
-        <NavLink to="/om-medlemskap/medlemskap" text="Medlemskap" />
-        <NavLink to="/om-medlemskap/events" text="Events" />
+        { /* [ ]  Small card for member avatar and name */ }
+        <NavLink to="/mina-sidor"> Mina Sidor </NavLink>
+        <NavLink to="/medlemskap"> Medlemskap </NavLink>
+        <NavLink to="/events"> Events </NavLink>
       </Sidebar>
 
-      <Content>
+      <StyledMain>
         <Outlet />
-      </Content>
+      </StyledMain>
     </PageWrapper>
   )
 }

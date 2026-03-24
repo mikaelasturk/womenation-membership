@@ -10,14 +10,25 @@ import { Button } from '../../reusable/ui/Button'
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 30px;
 `
+
+const StyledContentContainer = styled.div`
+
+`
+
+const StyledInputContainer = styled.div`
+  margin-top: 15px;
+`
+
+
 const StyledInput = styled.input`
-   background: ${({theme}) => theme.loggaIn.form.inputBgClr};
-   color: ${({theme}) => theme.loggaIn.form.inputTxtClr};
-   width: 100%;
-   border-radius: 3px;
-   border: none;
+  background: ${({theme}) => theme.loggaIn.form.inputBgClr};
+  color: ${({theme}) => theme.loggaIn.form.inputTxtClr};
+  width: 100%;
+  height: 35px;
+  border-radius: 3px;
+  border: none;
 `
 
 export const LogInForm = () => {
@@ -26,15 +37,21 @@ export const LogInForm = () => {
 
   return (
     <StyledForm>
-      {/* <label htmlFor="name" text={form.name}> 
-        <StyledInput type="name" id="name" name="name" />
-      </label> */}
-      <label htmlFor="email" >{form.email}
-        <StyledInput type="email" id="email" name="email" />
-      </label>
-      <label htmlFor="password">{form.password}
-        <StyledInput type="password" id="password" name="password" />
-      </label>
+      <StyledContentContainer>
+      <StyledInputContainer>
+        {/* <label htmlFor="name" text={form.name}> 
+          <StyledInput type="name" id="name" name="name" />
+        </label> */}
+        <label htmlFor="email" >{form.email}
+          <StyledInput type="email" id="email" name="email" />
+        </label>
+      </StyledInputContainer>
+      <StyledInputContainer>
+        <label htmlFor="password">{form.password}
+          <StyledInput type="password" id="password" name="password" />
+        </label>
+        </StyledInputContainer>
+      </StyledContentContainer>
       <Button text={form.button} variant="loggaIn-login"/>
     </StyledForm>
 

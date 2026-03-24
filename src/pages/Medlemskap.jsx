@@ -4,10 +4,10 @@ const StyledComponent = styled.div`
 
 `
 
-export const MinaSidor = () => {
+export const Medlemskap = () => {
   return (
     <>  
-     <h2>Mina sidor</h2>
+      <h2>Medlemskap</h2>
     </>
   )
 }

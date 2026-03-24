@@ -10,11 +10,13 @@ const StyledLogInCard = styled.div`
   background: ${({theme}) => theme.loggaIn.form.bgClr};
   color: ${({theme}) => theme.loggaIn.form.txtClr};
   width: 50%;
+  max-width: 450px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 30px;
   justify-self: center;
-  padding: 30px;
+  padding: 80px 40px;
+  margin-top: 60px;
   border-radius: 10px;
 `
 

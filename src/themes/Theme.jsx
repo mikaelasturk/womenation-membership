@@ -53,7 +53,7 @@ export const Theme = {
   
   //Color theme for "loggaIn" page
   loggaIn: {
-    bgClr: 'var(--black)',
+    bgClr: 'var(--darkPurple)',
     txtClr: '',
     cards: {
       bgClr: '',
