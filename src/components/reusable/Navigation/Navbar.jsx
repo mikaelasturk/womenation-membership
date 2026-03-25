@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { NavLink } from "react-router"
+import { NavLink } from "react-router-dom"
 import { Button } from "../ui/Button"
 import { useContentStore } from "../../../store/contentStore"
 import { useState } from "react"
@@ -47,6 +47,7 @@ export const Navbar = () => {
         <StyledItems>om oss</StyledItems>
         <StyledItems>kontakt</StyledItems>
         <StyledItems><NavLink to="/om-medlemskap">om medlemskap</NavLink></StyledItems>
+        <StyledItems><NavLink to="/konto">konto</NavLink></StyledItems>
       </StyledUl>
         <StyledButton onClick={handleClick}
       aria-expanded={expanded}

@@ -1,10 +1,5 @@
-import styled from 'styled-components'
-
-const StyledComponent = styled.div`
-
-`
-
 export const MinaSidor = () => {
+  
   return (
     <>  
      <h2>Mina sidor</h2>

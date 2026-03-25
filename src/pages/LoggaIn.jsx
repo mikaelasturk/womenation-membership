@@ -5,6 +5,7 @@ import styled from 'styled-components'
 // import { PageTitle, BodyText } from '../components/reusable/typography/typography'
 import { LogInCard } from '../components/pages/logga-in/LogInCard'
 import { Button } from "../components/reusable/ui/Button"
+import { Link } from 'react-router'
 
 const StyledLoggaIn = styled.div`
   background: ${({theme}) => theme.loggaIn.bgClr};
@@ -12,7 +13,7 @@ const StyledLoggaIn = styled.div`
 `
 
 const StyledContentContainer = styled.div`
-  padding: 40px;
+  padding-top: 40px;
 `
 
 export const LoggaIn = () => {
@@ -22,7 +23,7 @@ export const LoggaIn = () => {
   return (
       <StyledLoggaIn>
         <StyledContentContainer>
-          <Button text="Gå tillbaka" /> 
+          <Button as={Link} to="/" variant="go-back" text="Gå tillbaka" /> 
           {/* <PageTitle text={heading} />
           <BodyText text={description} /> */}
           <LogInCard />

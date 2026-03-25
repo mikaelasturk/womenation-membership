@@ -1,6 +1,6 @@
 // [ ] Behöver Routewrapper path för att redirectas från logga in? Eller räcker det med index pathen?
 
-import { BrowserRouter, Routes, Route, Navigate } from "react-router"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import { ThemeProvider } from "styled-components"
 import { Theme } from "./themes/theme"
 import { GlobalStyle } from "./styles/GlobalStyle"
@@ -28,7 +28,8 @@ export const App = () => {
             <Route path="/om-medlemskap" element={<OmMedlemskap />}/>
             <Route path="/logga-in" element={<LoggaIn />}/>
             <Route element={<MedlemsportalLayout />}>
-              <Route index path="mina-sidor" element={<MinaSidor />} />
+              {/* <Route element={<h2>Välkommen till ditt konto!</h2>} /> */}
+              <Route path="mina-sidor" element={<MinaSidor />} />
               <Route path="medlemskap" element={<Medlemskap />} />
               <Route path="events" element={<Events />} />
             </Route>

@@ -1,4 +1,4 @@
-// [ ] TODO make button for going back to the membership page. 
+// [x] TODO make button for going back to the membership page. 
 
 import styled from 'styled-components'
 import { Button } from '../../reusable/ui/Button'
@@ -9,8 +9,8 @@ import { LogInForm } from "./LogInForm"
 const StyledLogInCard = styled.div`
   background: ${({theme}) => theme.loggaIn.form.bgClr};
   color: ${({theme}) => theme.loggaIn.form.txtClr};
-  width: 50%;
-  max-width: 450px;
+  width: 80%;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -18,6 +18,11 @@ const StyledLogInCard = styled.div`
   padding: 80px 40px;
   margin-top: 60px;
   border-radius: 10px;
+
+  @media (min-width: ${({theme}) => theme.breakpoints.desktop}) {
+    width: 50%;
+    max-width: 450px;
+  }
 `
 
 const StyledTextContainer = styled.div`
@@ -26,7 +31,7 @@ const StyledTextContainer = styled.div`
 
 export const LogInCard = () => {
   const { logInContent } = useContentStore()
-  const { heading, text } = logInContent
+  const { heading, text , signUp} = logInContent
 
   return (
     <StyledLogInCard >
@@ -35,6 +40,7 @@ export const LogInCard = () => {
         <BodyText text={text} />
       </StyledTextContainer>
       <LogInForm />
+      <BodyText text={signUp}/>
     </StyledLogInCard>
   )
 }

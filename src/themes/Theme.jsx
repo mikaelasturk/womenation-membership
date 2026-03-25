@@ -69,6 +69,10 @@ export const Theme = {
         bgClr: 'var(--gold)',
         txtClr: 'var(--black)',
       },
+      gåTillbaka: {
+        bgClr: 'var(--lightGrey)',
+        txtClr: 'var(--black)',
+      },
     },
   },
 }

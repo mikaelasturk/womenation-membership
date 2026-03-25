@@ -24,10 +24,15 @@ const StyledButton = styled.button`
     background: ${theme.loggaIn.buttons.loggaIn.bgClr};
     justify-content: center;
   `}
+
+  ${({ $variant, theme}) => $variant === "go-back" && `
+    display: inline;
+    background: ${theme.loggaIn.buttons.gåTillbaka.bgClr};
+  `}
 `
 
-export const Button = ({ text, variant }) => {
+export const Button = ({ text, variant, ...props }) => {
   return (
-    <StyledButton $variant={variant}>{text}</StyledButton>
+    <StyledButton $variant={variant} {...props}>{text}</StyledButton>
   )
 }

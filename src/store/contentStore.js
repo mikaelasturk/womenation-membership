@@ -27,6 +27,7 @@ const membershipContent = {
 const logInContent = {
   heading: "Logga in",
   text: "Välkommen tillbaka! Logga in för att få tillgång till ditt konto.",
+  signUp: "inte registrerad? bli medlem här",
   form: {
     name: "namn",
     email: "E-post",
@@ -40,9 +41,20 @@ const minaSidorContent = {
   description: "Här kan du se dina medlemskap och uppdatera din information.", 
 } 
 
+const eventContent = {
+  heading: "Events",
+  description: "hallå",
+  card: {
+    image: "",
+    title: "hej",
+    description: ""
+  }
+}
+
 
 export const useContentStore = create(() => ({
   content: membershipContent,
   logInContent: logInContent,
-  minaSidorContent: minaSidorContent
+  minaSidorContent: minaSidorContent,
+  eventContent: eventContent
 }))

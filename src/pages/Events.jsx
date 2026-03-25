@@ -1,13 +1,19 @@
-import styled from 'styled-components'
+// import styled from 'styled-components'
+import { useContentStore } from '../store/contentStore'
+import { PageTitle, BodyText } from '../components/reusable/typography/typography'
 
-const StyledComponent = styled.div`
+// const StyledComponent = styled.div`
 
-`
+// `
 
 export const Events = () => {
+  const {eventContent} = useContentStore()
+  const { heading, description } = eventContent
+
   return (
     <>  
-      <h2>Events</h2>
+      <PageTitle text={heading} />
+      <BodyText text={description} />
     </>
   )
 }

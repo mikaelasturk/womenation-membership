@@ -12,6 +12,7 @@ const StyledContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-self: center;
+  padding: 40px;
   color: ${({ theme }) => theme.omMedlemskap.txtClr};
 `
 
