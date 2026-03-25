@@ -13,7 +13,7 @@ const StyledLoggaIn = styled.div`
 `
 
 const StyledContentContainer = styled.div`
-  padding-top: 40px;
+  padding: 40px;
 `
 
 export const LoggaIn = () => {

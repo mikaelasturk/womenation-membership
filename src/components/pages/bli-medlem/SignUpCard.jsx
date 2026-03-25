@@ -1,13 +1,11 @@
-// [x] TODO make button for going back to the membership page. 
-
 import styled from 'styled-components'
 import { Button } from '../../reusable/ui/Button'
 import { BodyText, CardTitle } from '../../reusable/typography/typography'
 import { useContentStore } from '../../../store/contentStore'
-import { LogInForm } from "./LogInForm"
+import { SignUpForm } from "./SignUpForm"
 import { Link } from 'react-router'
 
-const StyledLogInCard = styled.div`
+const StyledSignUpCard = styled.div`
   background: ${({theme}) => theme.loggaIn.form.bgClr};
   color: ${({theme}) => theme.loggaIn.form.txtClr};
   width: 80%;
@@ -38,21 +36,20 @@ const StyledLink = styled(Link)`
   text-decoration: underline;
 `
 
-export const LogInCard = () => {
+export const SignUpCard = () => {
   const { logInContent } = useContentStore()
-  const { heading, text, signUp} = logInContent
+  const { heading, text, logIn } = logInContent
 
   return (
-    <StyledLogInCard >
+    <StyledSignUpCard >
       <StyledTextContainer>
-        <CardTitle text={heading.logIn} />
-        <BodyText text={text.logIn} />
+        <CardTitle text={heading.signUp} />
+        <BodyText text={text.signUp} />
       </StyledTextContainer>
-      <LogInForm />
+      <SignUpForm />
       <StyledSignupContainer>
-        <BodyText text={signUp.text}><StyledLink to={signUp.linkTo}>{signUp.linkText}</StyledLink></BodyText>
+        <BodyText text={logIn.text}><StyledLink to={logIn.linkTo}>{logIn.linkText}</StyledLink></BodyText>
       </StyledSignupContainer>
-    </StyledLogInCard>
+    </StyledSignUpCard>
   )
 }
-

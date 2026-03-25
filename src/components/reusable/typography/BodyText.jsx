@@ -6,10 +6,10 @@ const StyledBodyText = styled.p`
 
 `
 
-export const BodyText = ({ text }) => {
+export const BodyText = ({ text, children }) => {
   return (
     <StyledBodyText>
-      {text}
+      {text}{children}
     </StyledBodyText>
   )
 }

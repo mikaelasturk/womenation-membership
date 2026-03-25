@@ -23,16 +23,36 @@ const membershipContent = {
     logIn: "Logga in" 
   }
 }
+// [x] Ändra i logga in komponent efter restructure 
 
 const logInContent = {
-  heading: "Logga in",
-  text: "Välkommen tillbaka! Logga in för att få tillgång till ditt konto.",
-  signUp: "inte registrerad? bli medlem här",
+  heading: {
+    logIn: "Logga in",
+    signUp: "Bli medlem",
+  },
+  text: {
+    logIn: "Välkommen tillbaka!\nLogga in för att få tillgång till ditt konto.",
+    signUp: "Skapa konto!\nfyll i din information för att få tillgång till ditt konto.",
+  },
+  signUp: {
+    text: "Inte registrerad? Bli medlem ",
+    linkText: "här",
+    linkTo: "/bli-medlem"
+  },
+  logIn: {
+    text: "Redan medlem? Logga in ",
+    linkText: "här",
+    linkTo: "/logga-in"
+  },
   form: {
     name: "namn",
     email: "E-post",
     password: "Lösenord",
-    button: "Logga in"
+    button: {
+      logIn: "Logga in",
+      signUp: "Bli medlem"
+
+    }
   },
 }
 

@@ -9,6 +9,8 @@ export const Theme = {
     desktop: '1024px',
   },
 
+  // [ ] gå igenom vad som använder colors och ändra till strukturen nedan
+
   colors: {
     darkPurple: '#442E57',     //grafisk profil
     mediumPurple: '#574368', //hemsidan
@@ -53,13 +55,13 @@ export const Theme = {
   
   //Color theme for "loggaIn" page
   loggaIn: {
-    bgClr: 'var(--darkPurple)',
+    bgClr: 'var(--mediumPurple)',
     txtClr: '',
     cards: {
       bgClr: '',
     },
     form: {
-      bgClr: 'var(--darkGrey)',
+      bgClr: 'var(--darkPurple)',
       txtClr: 'var(--white)',
       inputBgClr: 'var(--lightGrey)',
       inputTxtClr: 'var(--darkGrey)',
