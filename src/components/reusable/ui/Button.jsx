@@ -28,6 +28,7 @@ const StyledButton = styled.button`
   ${({ $variant, theme}) => $variant === "go-back" && `
     display: inline;
     background: ${theme.loggaIn.buttons.gåTillbaka.bgClr};
+    margin-left: 40px;
   `}
 `
 

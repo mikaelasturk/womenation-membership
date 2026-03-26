@@ -9,7 +9,7 @@ const StyledBliMedlem = styled.div`
 `
 
 const StyledContentContainer = styled.div`
-  padding: 40px;
+  padding-top: 40px;
 `
 
 export const BliMedlem = () => {

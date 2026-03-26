@@ -61,7 +61,7 @@ export const Navbar = () => {
       <StyledNavContent $expanded={expanded}>
         <StyledHamList>
           <li><StyledHamItem to="/om-medlemskap">Om medlemskap</StyledHamItem></li>
-          <li><StyledHamItem to="/login">login</StyledHamItem></li>
+          <li><StyledHamItem to="/konto">konto</StyledHamItem></li>
         </StyledHamList>
       </StyledNavContent>
       <StyledButtonWrapper>
@@ -94,6 +94,7 @@ const StyledNavContent = styled.div`
   background: ${({ theme }) => theme.colors.black};
   align-items: center;
   width: 100vw;
+  height: 50vh;
   transition: transform 0.3s ease-in-out, opacity 0.5s ease;
   transform: ${({ $expanded }) =>
     $expanded ? "translateY(0)" : "translateY(-100%)"};
@@ -128,12 +129,15 @@ const StyledThirdSpan = styled(StyledSpan)`
 
 const StyledHamList = styled.ul`
   list-style: none;
-  padding: 5px;
+  padding-top: 100px;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 `
 
 const StyledHamItem = styled(NavLink)`
   text-decoration: none;
+  font-size: 18px;
   color: ${({ theme }) => theme.colors.white};
- 
 `
