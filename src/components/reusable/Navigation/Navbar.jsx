@@ -12,6 +12,16 @@ const StyledNavbar = styled.nav`
   justify-content: space-between;
 `
 
+const StyledNavContentContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
+const StyledLogo = styled.img`
+  height: 10vh;
+  padding: 20px 0 0 20px;
+`
+
 const StyledUl = styled.ul`
   display: none;
 
@@ -42,6 +52,10 @@ export const Navbar = () => {
 
   return (
     <StyledNavbar $expanded={expanded}>
+      <StyledNavContentContainer>
+      <NavLink to="/">
+        <StyledLogo src="/media/logo/Color logo - no background.png"/>
+      </NavLink>
       <StyledUl>
         <StyledItems>hem</StyledItems>
         <StyledItems>om oss</StyledItems>
@@ -64,6 +78,7 @@ export const Navbar = () => {
           <li><StyledHamItem to="/konto">konto</StyledHamItem></li>
         </StyledHamList>
       </StyledNavContent>
+    </StyledNavContentContainer>
       <StyledButtonWrapper>
         <NavLink to="/logga-in"><Button text={content.buttons.logIn} variant="omMedlemskap-login"/>
         </NavLink>

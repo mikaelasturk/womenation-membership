@@ -12,13 +12,13 @@ const Background = styled.div`
   min-height: 280px;
   background-image: ${props => `url("${props.bg}")`};
   background-size: cover;
-  background-position: center;
+  background-position: center 30%;
   display: flex;
   align-items: center;
   justify-content: center;
 
   @media (min-width: ${({theme}) => theme.breakpoints.desktop}) {
-    height: 60vh;
+    height: 65vh;
   }
 `
 
