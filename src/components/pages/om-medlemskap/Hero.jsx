@@ -25,7 +25,7 @@ const Background = styled.div`
 const Overlay = styled.div`
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45); /* justera opacitet efter behov */
+  background: rgba(0,0,0,0.45);
   pointer-events: none;
 `
 

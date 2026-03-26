@@ -31,8 +31,8 @@ const StyledCard = styled.div`
   }
 
   @media (min-width: ${({theme}) => theme.breakpoints.desktop}) {
-    width: 80%;
-    max-width: 300px;
+    width: 90%;
+    max-width: 450px;
   }
 `
 const StyledTextContainer = styled.div`
@@ -43,6 +43,11 @@ const StyledTextContainer = styled.div`
   color: ${({theme}) => theme.omMedlemskap.cards.txtClr};
 `
 
+const StyledDivider = styled.hr`
+  height: 0.5px;
+  margin: 10px 0;
+`
+
 export const MembershipCard = ({ variant }) => {
   const { content } = useContentStore()
 
@@ -50,8 +55,9 @@ export const MembershipCard = ({ variant }) => {
     <StyledCard>
       <StyledTextContainer>
         <BodyText text={content.cards[variant].type} />
-        <CardTitle text={content.cards[variant].price} />
-        <BodyText text={content.cards[variant].info}/>
+        <CardTitle variant="om-medlemskap" text={content.cards[variant].price} />
+        <StyledDivider/>
+        <BodyText variant="om-medlemskap-info" text={content.cards[variant].info}/>
       </StyledTextContainer>
       <Button text={content.buttons[variant]} variant="card" />
     </StyledCard>

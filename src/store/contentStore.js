@@ -1,26 +1,26 @@
 import { create } from "zustand"
 
 const membershipContent = {
-  hero: "Om medlemskap",
-  heading: "Bli premium medlem!",
-  text: "Få exklusiva rabatter och erbjudande. Förtur på eventbiljetter ...",
+  hero: "OM MEDLEMSKAP",
+  heading: "BLI PREMIUM MEDLEM!",
+  text: "Få exklusiva rabatter och erbjudande. Förtur på eventbiljetter",
   cards: {
-    pro: {
-      type: "Pro",
-      price: "100kr/mån",
+    basic: {
+      type: "BASIC",
+      price: "Gratis",
       info:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "Köpa biljetter genom portalen\nTillgång till medlemsportalen",
     },
-    enterprise: {
-      type: "Enterprise",
-      price: "200kr/mån",
+    pro: {
+      type: "PRO",
+      price: "SEK 200",
       info:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Förträde till events\nExklusiva rabatter från våra partners\nTillgång till Womenation marketplace",
     },
   },
   buttons: {
+    basic: "Välj Basic",
     pro: "Välj Pro",
-    enterprise: "Välj Enterprise",
     logIn: "Logga in" 
   }
 }

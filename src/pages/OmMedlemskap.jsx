@@ -44,8 +44,8 @@ export const OmMedlemskap = () => {
         <PageTitle text={content.heading} />
         <BodyText text={content.text} />
         <StyledCardContainer>
+          <MembershipCard variant="basic" />
           <MembershipCard variant="pro" />
-          <MembershipCard variant="enterprise" />
         </StyledCardContainer>
       </StyledContent>
     </StyledOmMedlemskap>
