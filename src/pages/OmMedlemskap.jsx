@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { MembershipCard } from "../components/pages/om-medlemskap/MembershipCard"
+import { Hero } from '../components/pages/om-medlemskap/Hero'
 import { useContentStore } from "../store/contentStore"
 import { PageTitle, BodyText } from "../components/reusable/typography/typography"
 
@@ -38,6 +39,7 @@ export const OmMedlemskap = () => {
 
   return (
     <StyledOmMedlemskap>
+      <Hero/>
       <StyledContent>
         <PageTitle text={content.heading} />
         <BodyText text={content.text} />

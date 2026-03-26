@@ -1,6 +1,7 @@
 import { create } from "zustand"
 
 const membershipContent = {
+  hero: "Om medlemskap",
   heading: "Bli premium medlem!",
   text: "Få exklusiva rabatter och erbjudande. Förtur på eventbiljetter ...",
   cards: {

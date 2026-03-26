@@ -1,4 +1,4 @@
-// [ ] Make components for inputfields?
+// [x] Make components for inputfields?
 // [ ] Connect form to backend
 // [x] Connect form to content store
 
